@@ -13,7 +13,19 @@ object Bot extends App {
 
   val update = Source.fromURL(webSite + getUpdates)
 
-  print(update.mkString)
+  println(update.mkString)
+
+  val isMetric = true
+  //val locationUrl = "";
+  //var currentConditionsUrl = "";
+
+  val apiKey = "1TsLx3HuA234XU56tFnAthme6oMtZlGm"
+
+  val country = "%2C%20Latvia"
+  val city = "Riga"
+  val location = Source.fromURL(s"http://dataservice.accuweather.com/locations/v1/search?apikey=$apiKey&q=$city$country")
+
+  //print(location.mkString)
 }
 
 
